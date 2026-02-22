@@ -1,112 +1,160 @@
-📌 To-Do List App (Express + EJS)
+✅ To-Do List REST API
 
-A simple and user-friendly To-Do List web application built using Node.js, Express.js, and EJS.
-This project demonstrates CRUD operations, server-side rendering, and basic MVC concepts.
+Node.js | Express.js | RESTful Architecture
+
+A beginner-friendly RESTful To-Do List API built using Node.js and Express.js that supports full CRUD operations (Create, Read, Update, Delete).
+This project demonstrates proper routing, clean code practices, and centralized error handling using a custom HttpError class.
 
 🚀 Features
 
-Add new tasks
+🏠 Home route with welcome message
 
-Edit existing tasks
+📋 Retrieve all to-do items
 
-Delete tasks
+🔍 Retrieve a single to-do by ID
 
-Mark tasks as completed / uncompleted
+➕ Create a new to-do
 
-Display completed & uncompleted task counts
+✏️ Partially update a to-do (PATCH)
 
-Clean and responsive UI
+🔁 Fully replace a to-do (PUT)
+
+❌ Delete a to-do
+
+⚠️ Centralized custom error handling middleware
+
+🧠 Clean, modular, and beginner-friendly structure
 
 🛠️ Tech Stack
 
-Node.js
+Runtime: Node.js
 
-Express.js
+Framework: Express.js
 
-EJS (Embedded JavaScript Templates)
+API Style: REST
 
-HTML5
+Data Storage: In-memory array (for learning purposes)
 
-CSS3
+Testing Tools: Pos
+tman / Thunder Client
 
-📂 Project Structure
-todo-ejs-app/
+ Postman API Testing
+📸 Screenshots
+HOME 
+
+<img width="1280" height="832" alt="home" src="https://github.com/user-attachments/assets/cc78f424-3d26-4167-9f0b-5413c7f91c1b" />
+UNDEFINED ROUTE HANDLING
+
+<img width="1280" height="832" alt="route_handling" src="https://github.com/user-attachments/assets/19e55a14-21c5-4195-9a09-1a3299c8aef4" />
+GET ALL TODOS
+
+<img width="1280" height="832" alt="alltodos" src="https://github.com/user-attachments/assets/04c74b2b-82fd-4208-8120-49a3ae119057" />
+GET TODO BY ID
+
+<img width="1280" height="832" alt="getbyid" src="https://github.com/user-attachments/assets/a13f3a14-a77e-46db-9c9b-29fc271b7e9c" />
+CREATE TODO
+
+<img width="1280" height="832" alt="create-todo" src="https://github.com/user-attachments/assets/a9a29149-9db3-4472-8256-1e5519aa6eb3" />
+UPDATE TODO(PATCH)
+
+<img width="1280" height="832" alt="update-patch" src="https://github.com/user-attachments/assets/0a50069d-0da9-4fdf-b895-be041e8781f8" />
+
+UPDATE TODO(PUT)
+
+<img width="1280" height="832" alt="update-put" src="https://github.com/user-attachments/assets/2f555567-8311-41a9-9820-d5e013e322f7" />
+DELETE TODO
+
+<img width="1280" height="832" alt="delete" src="https://github.com/user-attachments/assets/cffccb77-9252-4d21-8219-9c152078ed62" />
+
+
+📁 Project Structure
+TO-DO-LIST/
+│
+├── middleware/
+│   └── httpError.js
 │
 ├── app.js
 ├── package.json
-│
-├── views/
-│   ├── index.ejs
-│   └── error.ejs
-│
-├── middleware/
-│   └── HttpError.js
-│
-└── public/
-    └── style.css
+└── README.md
 
 ⚙️ Installation & Setup
-
-Clone the repository
-
-git clone https://github.com/your-username/todo-ejs-app.git
-
-
-Navigate to project folder
-
-cd todo-ejs-app
-
-
-Install dependencies
-
+1️⃣ Clone the repository
+git clone https://github.com/your-username/todo-api.git
+2️⃣ Navigate to project folder
+cd todo-api
+3️⃣ Install dependencies
 npm install
+4️⃣ Start the server
+npm run dev
 
-
-Start server
-
-node app.js
-
-
-Open browser
+Server will start at:
 
 http://localhost:5001
 
-🧪 How It Works
+📌 API Endpoints
+🏠 Home Route
+GET /
+📋 Get All Todos
+GET /todos
+🔍 Get Todo by ID
+GET /todos/:id
+➕ Create Todo
+POST /todos
 
-Tasks are stored in a temporary in-memory array
+Request Body (JSON)
 
-Express handles routing & logic
+{
+  "title": "Learn Express",
+  "description": "Understand routing and middleware"
+}
+✏️ Update Todo (PATCH)
+PATCH /todos/:id
 
-EJS renders dynamic HTML pages
+Request Body (JSON)
 
-Forms submit data using POST requests
+{
+  "title": "Updated title",
+  "description": "Updated description"
+}
+🔁 Replace Todo (PUT)
+PUT /todos/:id
 
-📸 Screenshots
-<img width="1280" height="681" alt="Screenshot 2026-02-10 at 11 52 07 PM" src="https://github.com/user-attachments/assets/791ea8a3-46ff-47e5-b05f-70e488b16d98" />
+Request Body (JSON)
 
-🔮 Future Improvements
+{
+  "title": "New title",
+  "description": "New description"
+}
+❌ Delete Todo
+DELETE /todos/:id
+🧪 API Testing
 
-MongoDB database integration
+All endpoints were tested using:
 
-User authentication
+Postman
 
-Task categories
+Thunder Client
 
-Due dates & priorities
+Screenshots of API testing are available inside the project.
 
-REST API version
+🧠 Learning Outcomes
+
+Understanding RESTful API design
+
+Implementing CRUD operations
+
+Using Express routing and middleware
+
+Creating reusable custom error classes
+
+Structuring backend projects cleanly
+
 
 🤝 Contributing
 
-Contributions are welcome!
-Feel free to fork the project and submit a pull request.
+Pull requests are welcome.
+For major changes, please open an issue first to discuss improvements.
 
+📄 License
 
-👩‍💻 Author
-
-Vaishali Chauhan
-Frontend & Backend Learner
-
-GitHub: https://github.com/vaishali2801
-
-LinkedIn: https://www.linkedin.com/in/vaishalich2801
+This project is open-source and available under the MIT License.
