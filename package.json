@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/vaishali2801/To-Do-List#readme",
   "dependencies": {
-    "ejs": "^4.0.1",
     "express": "^5.2.1"
   }
 }
